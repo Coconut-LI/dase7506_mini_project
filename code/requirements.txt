@@ -1,0 +1,5 @@
+torch==2.7.1
+numpy==2.5.3
+tokenizers==0.21.4
+# Added for plot_diagnostics.py.
+matplotlib>=3.9,<4
