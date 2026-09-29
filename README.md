@@ -1,2 +1,14 @@
 # dase7506_mini_project
 mini_project
+#运行命令，这里我在conda环境下，cuda版本为2.7.1进行训练
+(dase7506) coconut@coconut-Inspiron-16-7610:~/RIS/class_7506/MP1_student_starter/MP1_student_starter/code$ python train.py --implementation student --device cuda --precision auto   --seed 17 --eval-every 300 --run-dir runs/my-model-cuda-v11
+
+#这里省略了vali的评估，因为跟test没有关系
+
+#运行测试命令，查看老师要求的cpu下的运行结果
+(dase7506) coconut@coconut-Inspiron-16-7610:~/RIS/class_7506/MP1_student_starter/MP1_student_starter/code$ /usr/bin/time -v -o runs/my-model-cuda-v11/test_cpu_fp32_resource.txt python evaluate.py   --checkpoint runs/my-model-cuda-v11/checkpoint.pt   --device cpu --precision fp32 --threads 4 --split test   --output runs/my-model-cuda-v11/test_cpu_fp32.json
+
+#得到评估结果，checkpoint，bpb结果，以及cpu的利用报告
+checkpoint.pt
+test_cpu_fp32.json
+test_cpu_fp32_resource.txt
