@@ -1,4 +1,4 @@
-#运行命令，这里我在conda环境下，cuda版本为2.7.1进行训练
+#运行命令，这里在conda环境下，cuda版本为2.7.1进行训练
 (dase7506) coconut@coconut-Inspiron-16-7610:~/RIS/class_7506/MP1_student_starter/MP1_student_starter/code$ python train.py --implementation student --device cuda --precision auto   --seed 17 --eval-every 300 --run-dir runs/my-model-cuda-v11
 
 #这里省略了vali的评估，因为跟test没有关系
